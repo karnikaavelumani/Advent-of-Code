@@ -2,15 +2,15 @@
 with open('day1.txt') as text:
     lines = [x.strip() for x in text.readlines()] # strip file (removes '\n')
 
-    # set max and sum to 0
-    max = 0
-    sum = 0
+    # initialize variables
+    max = 0 # largest summed group
+    sum = 0 # sum of each individual group
 
     # loop through each element
     for val in lines:
         # add all values in a group
         if val != '':
-            sum = int(val) + sum
+            sum += int(val)
         # set largest value as max
         else:
             if sum > max:
