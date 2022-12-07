@@ -1,5 +1,5 @@
 # read text file
-with open('day1.txt') as text:
+with open('input.txt') as text:
     lines = [x.strip() for x in text.readlines()] # strip file (removes '\n')
 
     # initialize variables
