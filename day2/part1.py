@@ -1,4 +1,4 @@
-with open('day2.txt') as text:
+with open('input.txt') as text:
     lines = [x.strip() for x in text.readlines()] # strip file (removes '\n')
 
     total = 0
