@@ -1,6 +1,5 @@
 with open('day2.txt') as text:
     lines = [x.strip() for x in text.readlines()] # strip file (removes '\n')
-    # print(lines)
 
     total = 0
     # loop through each element
