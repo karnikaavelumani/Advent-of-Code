@@ -3,16 +3,18 @@ def solution(lines):
     for line in lines:
         middle = len(line)//2
         left, right = line[:middle], line[middle:]
-        for i in left:
-            for j in right:
-                if i == j:
-                    if j.isupper():
-                        upper = ord(j) - 38
-                        lst.append(upper)
-                    if j.islower():
-                        lower = ord(j) - 96
-                        lst.append(lower)
-    total = 0
+        for elem in line:
+            if elem in left and elem in right:
+                if elem.isupper():
+                    upper = ord(elem) - 38
+                    lst.append(upper)
+                    break
+                if elem.islower():
+                    lower = ord(elem) - 96
+                    lst.append(lower)
+                    break
+        
+    total = 0 
     for x in lst:
         total += x
     print(total)
