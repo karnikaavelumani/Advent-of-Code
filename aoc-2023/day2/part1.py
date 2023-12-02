@@ -1,21 +1,10 @@
 def solution(lines):
     colors = {"red": 12, "green": 13, "blue": 14}
-    print(lines)
+    for line in lines:
+        game_id = line.replace("Game ", "")
+        print(line)
     
 
 with open('sample.txt') as text:
-    lines = {}
-    lines = text.read().strip()
-    # lines = lines.split(": ")
-    # game_id = lines[0].replace("Game ", "")
-    # sets = lines[1].split("; ")
-
-    
-    
+    lines = [x.strip() for x in text.readlines()]
     solution(lines)
-
-# python3 main.py < input.dat
-
-# from sys import stdin
-# for line in stdin:
-#     line = line.strip()
